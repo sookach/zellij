@@ -11,15 +11,15 @@ keybinds clear-defaults=true {
 
   tmux {
     bind "Ctrl c" { SwitchToMode "normal"; }
-    bind "c" { NewTab; }
-    bind "'" { NewPane "Right"; }
-    bind ";" { NewPane "Down"; }
-    bind "n" { GoToNextTab; }
-    bind "p" { GoToPreviousTab; }
-    bind "h" { MoveFocus "Left"; }
-    bind "j" { MoveFocus "Down"; }
-    bind "k" { MoveFocus "Up"; }
-    bind "l" { MoveFocus "Right"; }
+    bind "c" { NewTab; SwitchToMode "normal"; }
+    bind "'" { NewPane "Right"; SwitchToMode "normal"; }
+    bind ";" { NewPane "Down"; SwitchToMode "normal"; }
+    bind "n" { GoToNextTab; SwitchToMode "normal"; }
+    bind "p" { GoToPreviousTab; SwitchToMode "normal"; }
+    bind "h" { MoveFocus "Left"; SwitchToMode "normal"; }
+    bind "j" { MoveFocus "Down"; SwitchToMode "normal"; }
+    bind "k" { MoveFocus "Up"; SwitchToMode "normal"; }
+    bind "l" { MoveFocus "Right"; SwitchToMode "normal"; }
     bind "d" { Detach; }
     bind "m" { SwitchToMode "move"; }
     bind "r" { SwitchToMode "resize"; }
@@ -27,12 +27,12 @@ keybinds clear-defaults=true {
 
   move {
     bind "Ctrl c" { SwitchToMode "normal"; }
-    bind "n" { MoveTab "Right"; }
-    bind "p" { MoveTab "Left"; }
-    bind "h" { MovePane "Left"; }
-    bind "j" { MovePane "Down"; }
-    bind "k" { MovePane "Up"; }
-    bind "l" { MovePane "Right"; }
+    bind "n" { MoveTab "Right"; SwitchToMode "normal"; }
+    bind "p" { MoveTab "Left"; SwitchToMode "normal"; }
+    bind "h" { MovePane "Left"; SwitchToMode "normal"; }
+    bind "j" { MovePane "Down"; SwitchToMode "normal"; }
+    bind "k" { MovePane "Up";  SwitchToMode "normal";}
+    bind "l" { MovePane "Right"; SwitchToMode "normal"; }
   }
 
   resize {
