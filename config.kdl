@@ -1,0 +1,45 @@
+simplified_ui true
+
+ui {
+  pane_frames false
+}
+
+keybinds clear-defaults=true {
+  normal {
+    bind "Ctrl f" { SwitchToMode "tmux"; }
+  }
+
+  tmux {
+    bind "Ctrl c" { SwitchToMode "normal"; }
+    bind "c" { NewTab; }
+    bind "'" { NewPane "Right"; }
+    bind ";" { NewPane "Down"; }
+    bind "n" { GoToNextTab; }
+    bind "p" { GoToPreviousTab; }
+    bind "h" { MoveFocus "Left"; }
+    bind "j" { MoveFocus "Down"; }
+    bind "k" { MoveFocus "Up"; }
+    bind "l" { MoveFocus "Right"; }
+    bind "d" { Detach; }
+    bind "m" { SwitchToMode "move"; }
+    bind "r" { SwitchToMode "resize"; }
+  }
+
+  move {
+    bind "Ctrl c" { SwitchToMode "normal"; }
+    bind "n" { MoveTab "Right"; }
+    bind "p" { MoveTab "Left"; }
+    bind "h" { MovePane "Left"; }
+    bind "j" { MovePane "Down"; }
+    bind "k" { MovePane "Up"; }
+    bind "l" { MovePane "Right"; }
+  }
+
+  resize {
+    bind "Ctrl c" { SwitchToMode "normal"; }
+    bind "h" { Resize "Left"; }
+    bind "j" { Resize "Down"; }
+    bind "k" { Resize "Up"; }
+    bind "l" { Resize "Right"; }
+  }
+}
