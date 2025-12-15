@@ -12,6 +12,7 @@ keybinds clear-defaults=true {
   }
 
   tmux {
+    bind "Esc" { SwitchToMode "normal"; }
     bind "Ctrl c" { SwitchToMode "normal"; }
     bind "c" { NewTab; SwitchToMode "normal"; }
     bind "'" { NewPane "Right"; SwitchToMode "normal"; }
@@ -29,6 +30,7 @@ keybinds clear-defaults=true {
   }
 
   move {
+    bind "Esc" { SwitchToMode "normal"; }
     bind "Ctrl c" { SwitchToMode "normal"; }
     bind "n" { MoveTab "Right"; SwitchToMode "normal"; }
     bind "p" { MoveTab "Left"; SwitchToMode "normal"; }
@@ -39,6 +41,7 @@ keybinds clear-defaults=true {
   }
 
   resize {
+    bind "Esc" { SwitchToMode "normal"; }
     bind "Ctrl c" { SwitchToMode "normal"; }
     bind "h" { Resize "Left"; }
     bind "j" { Resize "Down"; }
@@ -48,6 +51,7 @@ keybinds clear-defaults=true {
 
 
   scroll {
+    bind "Esc" { SwitchToMode "normal"; }
     bind "Ctrl c" { SwitchToMode "Normal"; }
     bind "j" { ScrollDown; }
     bind "k" { ScrollUp; }
