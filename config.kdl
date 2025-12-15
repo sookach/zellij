@@ -1,5 +1,7 @@
 simplified_ui true
 
+mouse_mode false
+
 ui {
   pane_frames false
 }
@@ -23,6 +25,7 @@ keybinds clear-defaults=true {
     bind "d" { Detach; }
     bind "m" { SwitchToMode "move"; }
     bind "r" { SwitchToMode "resize"; }
+    bind "s" { SwitchToMode "scroll"; }
   }
 
   move {
@@ -41,5 +44,14 @@ keybinds clear-defaults=true {
     bind "j" { Resize "Down"; }
     bind "k" { Resize "Up"; }
     bind "l" { Resize "Right"; }
+  }
+
+
+  scroll {
+    bind "Ctrl c" { SwitchToMode "Normal"; }
+    bind "j" { ScrollDown; }
+    bind "k" { ScrollUp; }
+    bind "g" { ScrollToTop; }
+    bind "G" { ScrollToBottom; }
   }
 }
